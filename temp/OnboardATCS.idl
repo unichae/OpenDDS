@@ -1,0 +1,12 @@
+#include "orbsvcs/TimeBase.idl"
+
+module OnboardATCS {
+    @topic
+    struct TestMessage {
+        @key long train_id;
+        string subject;
+        string text;
+        long count;
+        TimeBase::TimeT timestamp;
+    };
+};

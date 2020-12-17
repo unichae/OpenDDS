@@ -1,0 +1,39 @@
+#include "orbsvcs/TimeBase.idl"
+
+module OnboardATCS {
+    typedef sequence<short> ShortSeq;
+    
+    @topic
+    struct TrainMessage {
+        // for debugging
+        short msg_id;
+        short seq;        
+        TimeBase::TimeT timestamp;
+        string temp;
+        
+        // MSG ID 73
+        @key short nid_train_id;
+        short nid_train_num;
+        short nid_lrtg;
+        // short q_scale; 
+        short d_ftag;
+        short d_rtag;
+        short l_doubt_over;
+        short l_doubt_under;
+        short v_train;
+        short n_iter_i;
+        ShortSeq d_dist_from_i;
+        ShortSeq d_dist_to_i;
+        ShortSeq nid_tag_from_i;
+        ShortSeq nid_tag_to_i;
+        short n_iter_j;
+        ShortSeq nid_switch_j;
+        short n_iter_k;
+        ShortSeq d_sdist_from_k;
+        ShortSeq d_stag_from_k;
+        ShortSeq nid_stag_from_k;
+        ShortSeq nid_stag_to_k;
+        short n_iter_l;
+        ShortSeq nid_switch_id_l;
+    };
+};

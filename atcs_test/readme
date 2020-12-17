@@ -1,0 +1,26 @@
+1. make [project].idl file 
+
+2. ./init.sh
+    when it fails, ./reset.sh 
+
+3. check generated files
+    [project]C.h, cpp, inl
+    [project]S.h, cpp
+    [project]TypeSupport.idl
+    [project]TypeSupportC.h, cpp, inl
+    [project]TypeSupportS.h, cpp
+    [project]TypeSupportImpl.h, cpp
+    [project]Common_Export.h
+
+4. make subscriber.cpp and publisher.cpp
+
+5. modify on_data_available() in DataReaderListenerImpl.cpp 
+
+6. make [project].mwc, mpc
+
+7. generate build files 
+    $ $ACE_ROOT/bin/mwc.pl -type gnuace [project].mwc
+
+7. build the project
+
+8. check bin files 

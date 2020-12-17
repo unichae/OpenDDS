@@ -1,0 +1,18 @@
+reference: 
+https://opendds.org/about/articles/Article-Intro.html
+https://github.com/objectcomputing/OpenDDS/issues/1204
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+trouble shooting
+1. no such file StockQuoterCommon_Export.h
+generate manualy that file 
+$ $ACE_ROOT/bin/generate_export_file.pl DesiredName > DesiredName_Export.h
